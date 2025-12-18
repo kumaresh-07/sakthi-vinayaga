@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="outer-bg">
   <div class="mobile-container">
 
@@ -16,40 +15,92 @@
       Branded Led TV
     </div>
 
-    <!-- PRODUCT -->
+    <!-- PRODUCT CARDS -->
     <div class="product-card">
       <div class="img-placeholder"></div>
-
       <div class="product-text">
         <h2>Sony Led TV</h2>
         <p>Sony | LG | Index</p>
-        <div class="explore-btn">Explore</div>
+        <div class="explore-btn" onclick="openModal('sony')">Explore</div>
       </div>
     </div>
 
     <div class="product-card">
       <div class="img-placeholder"></div>
-
       <div class="product-text">
         <h2>Index Led TV</h2>
         <p>Sony | LG | Index</p>
-        <div class="explore-btn">Explore</div>
+        <div class="explore-btn" onclick="openModal('index')">Explore</div>
       </div>
     </div>
 
     <div class="product-card">
       <div class="img-placeholder"></div>
-
       <div class="product-text">
         <h2>LG Led TV</h2>
         <p>Sony | LG | Index</p>
-        <div class="explore-btn">Explore</div>
+        <div class="explore-btn" onclick="openModal('lg')">Explore</div>
       </div>
     </div>
 
   </div>
 </div>
 
+<!-- Overlay Modal -->
+<div id="modalOverlay" class="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-image">
+      <img id="modal-img" src="" alt="TV Image">
+    </div>
+    <div class="modal-content">
+      <h3 id="modal-title">Title</h3>
+      <p id="modal-price">Price</p>
+      <p id="modal-desc">Description</p>
+      <button class="close-btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // TV data
+  const tvModels = {
+    sony: {
+      title: "Sony 32\" Led TV",
+      price: "₹10,000",
+      description: "Full HD, Smart TV with vibrant colors and deep blacks.",
+      image: "images/sony-tv.jpg" // replace with actual path
+    },
+    lg: {
+      title: "LG 40\" Led TV",
+      price: "₹12,000",
+      description: "OLED display, Perfect blacks, immersive viewing experience.",
+      image: "images/lg-tv.jpg"
+    },
+    index: {
+      title: "Index 32\" Led TV",
+      price: "₹9,000",
+      description: "Affordable HD TV with great picture quality.",
+      image: "images/index-tv.jpg"
+    }
+  };
+
+  // Open modal dynamically
+  function openModal(model) {
+    const tv = tvModels[model];
+    if (tv) {
+      document.getElementById("modal-img").src = tv.image;
+      document.getElementById("modal-title").textContent = tv.title;
+      document.getElementById("modal-price").textContent = "Price: " + tv.price;
+      document.getElementById("modal-desc").textContent = tv.description;
+      document.getElementById("modalOverlay").style.display = "flex";
+    }
+  }
+
+  function closeModal(event) {
+    document.getElementById("modalOverlay").style.display = "none";
+  }
+</script>
 </body>
 </html>
+
 
