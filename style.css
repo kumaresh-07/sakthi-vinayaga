@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f6f6f6;
+}
+
+/* dotted background look */
+.outer-bg {
+  padding: 16px;
+  background-image: radial-gradient(#d8d8d8 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* main rounded container */
+.mobile-container {
+  max-width: 390px;
+  margin: auto;
+  padding: 16px;
+  background: #f4f4ea;
+  border-radius: 26px;
+}
+
+/* top card */
+.top-card {
+  background: #cfcfcf;
+  border-radius: 24px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.top-card h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.top-card p {
+  margin: 10px 0 16px;
+  font-size: 14px;
+}
+
+/* top buttons */
+.top-buttons {
+  display: flex;
+  gap: 14px;
+}
+
+.top-btn {
+  flex: 1;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.top-btn.outline {
+  background: transparent;
+  border: 2px solid #ffffff;
+}
+
+/* product cards */
+.product-card {
+  background: #cfcfcf;
+  border-radius: 24px;
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* exact image placeholder */
+.img-placeholder {
+  width: 92px;
+  height: 92px;
+  background: #ffffff;
+  border-radius: 22px;
+  flex-shrink: 0;
+}
+
+/* text area */
+.product-text h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.product-text p {
+  margin: 6px 0 10px;
+  font-size: 14px;
+}
+
+/* explore button */
+.explore-btn {
+  display: inline-block;
+  background: #ffffff;
+  padding: 8px 18px;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
