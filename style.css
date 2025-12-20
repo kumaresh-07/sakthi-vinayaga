@@ -5,7 +5,6 @@
 
 body {
   margin: 0;
-  background: #f6f6f6;
 }
 
 /* dotted background look */
@@ -24,25 +23,19 @@ body {
 }
 /* Top card container */
 .top-card {
-  background: #cfcfcf;
   border-radius: 24px;
   padding: 0;
   margin-bottom: 10px;
+      text-align: center;
+  box-shadow: 0 9px 34px rgba(0,0,0,0.13);
+  
 }
-
-/* Sticky shop name */
-.sticky-header {
-  position: sticky;
-  top: 0;
-  z-index: 5;
-  padding: 12px 16px; /* reduced */
-  background: #cfcfcf;
-  border-radius: 24px 24px 0 0;
-padding-bottom: 0px;}
 
 /* Content below sticky header */
 .normal-header {
-  padding: 3px 16px 12px; /* reduced top padding */
+  padding: 10px 3px 3px 2px;
+      margin-bottom: 15px;
+  
 }
 
 /* Buttons section */
@@ -90,21 +83,21 @@ padding-bottom: 0px;}
 
  /* product cards */
 .product-card {
-  background: #cfcfcf;
   border-radius: 24px;
   padding: 16px;
   display: flex;
   gap: 14px;
   align-items: center;
   margin-bottom: 18px;
+  box-shadow: 0 9px 34px rgba(0,0,0,0.13);
 }
 
 /* exact image placeholder */
 .img-placeholder {
   width: 92px;
   height: 92px;
-  background: #ffffff;
-  border-radius: 22px;
+    background: #cbc9c9;
+      border-radius: 22px;
   flex-shrink: 0;
 }
 
@@ -122,10 +115,11 @@ padding-bottom: 0px;}
 /* explore button */
 .explore-btn {
   display: inline-block;
-  background: #ffffff;
+  background: #adadad;
   padding: 8px 18px;
   border-radius: 14px;
   font-weight: 600;
+  
 }
 /* Category title pill */
 .category-title {
@@ -144,8 +138,7 @@ padding-bottom: 0px;}
 .explore-btn {
   cursor: pointer;
   text-decoration: none;
-  color: black;
-}
+color: #ffffff;}
 .footer {
   background-color: #000;
   color: #fff;
